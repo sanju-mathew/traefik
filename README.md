@@ -63,6 +63,4 @@ networks:
   proxy:
     external: true
 
-
-📂 Reference
-Detailed walkthrough: homelab.sanjuprojects.uk/traefik-proxy
+📖 **Read the full blog post here:** [https://homelab.sanjuprojects.uk/traefik-proxy/](https://homelab.sanjuprojects.uk/traefik-proxy/)
