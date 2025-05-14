@@ -62,3 +62,7 @@ services:
 networks:
   proxy:
     external: true
+
+
+📂 Reference
+Detailed walkthrough: homelab.sanjuprojects.uk/traefik-proxy
