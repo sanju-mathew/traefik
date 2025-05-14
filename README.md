@@ -1,5 +1,7 @@
 # 🧭 Traefik Proxy in a Homelab Environment
 
+📖 **Read the full blog post here:** [https://homelab.sanjuprojects.uk/traefik-proxy/](https://homelab.sanjuprojects.uk/traefik-proxy/)
+
 ## 🔍 Overview
 
 This guide explains how to set up **Traefik Proxy** in a homelab environment, replacing Nginx Proxy Manager. Traefik is a dynamic reverse proxy that integrates deeply with Docker and Kubernetes, offering built-in support for SSL, observability, and scalability.
@@ -62,5 +64,3 @@ services:
 networks:
   proxy:
     external: true
-
-📖 **Read the full blog post here:** [https://homelab.sanjuprojects.uk/traefik-proxy/](https://homelab.sanjuprojects.uk/traefik-proxy/)
