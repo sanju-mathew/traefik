@@ -32,35 +32,3 @@ A **reverse proxy** acts as a gateway between external users and internal servic
 | Routing             | Manual                   | Dynamic rule-based                 |
 | Load Balancing      | Basic                    | Advanced (sticky sessions, etc.)   |
 | Setup Difficulty    | Easy                     | Intermediate                       |
-
-## 🛠️ Docker Compose Example
-
-```yaml
-secrets:
-  cf-token:
-    file: ./cf-token
-
-services:
-  traefik:
-    image: traefik:latest
-    container_name: traefik
-    restart: unless-stopped
-    security_opt:
-      - no-new-privileges:true
-    secrets:
-      - cf-token
-    env_file:
-      - .env
-    networks:
-      - proxy
-    ports:
-      - 80:80
-      - 443:443
-    environment:
-      - TRAEFIK_DASHBOARD_CREDENTIALS=${TRAEFIK_DASHBOARD_CREDENTIALS}
-      - CF_API_EMAIL=youremail@example.com
-      - CF_DNS_API_TOKEN_FILE=/run/secrets/cf-token
-
-networks:
-  proxy:
-    external: true
